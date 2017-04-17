@@ -473,7 +473,7 @@
 };
 /* mmc end */
 
-/* USB GPIO Kernal Standardization start */
+/* USB GPIO Kernel Standardization start */
 &pio {
 	usb_default: usb_default {
 	};
@@ -486,26 +486,26 @@
 		};
 	};
 
-	gpio96_mode2_drvvbus: drvvbus_init {
+	gpio83_mode2_drvvbus: drvvbus_init {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO96__FUNC_GPIO96>;
+			pins = <PINMUX_GPIO83__FUNC_GPIO83>;
 			slew-rate = <1>;
 			bias-pull-down = <00>;
 		};
 	};
 
-	gpio96_mode2_drvvbus_low: drvvbus_low {
+	gpio83_mode2_drvvbus_low: drvvbus_low {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO96__FUNC_GPIO96>;
+			pins = <PINMUX_GPIO83__FUNC_GPIO83>;
 			slew-rate = <1>;
 			output-low;
 			bias-pull-down = <00>;
 		};
 	};
 
-	gpio96_mode2_drvvbus_high: drvvbus_high {
+	gpio83_mode2_drvvbus_high: drvvbus_high {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO96__FUNC_GPIO96>;
+			pins = <PINMUX_GPIO83__FUNC_GPIO83>;
 			slew-rate = <1>;
 			output-high;
 			bias-pull-down = <00>;
@@ -518,9 +518,9 @@
 	pinctrl-names = "usb_default", "iddig_irq_init", "drvvbus_init", "drvvbus_low", "drvvbus_high";
 	pinctrl-0 = <&usb_default>;
 	pinctrl-1 = <&gpio0_mode1_iddig>;
-	pinctrl-2 = <&gpio96_mode2_drvvbus>;
-	pinctrl-3 = <&gpio96_mode2_drvvbus_low>;
-	pinctrl-4 = <&gpio96_mode2_drvvbus_high>;
+	pinctrl-2 = <&gpio83_mode2_drvvbus>;
+	pinctrl-3 = <&gpio83_mode2_drvvbus_low>;
+	pinctrl-4 = <&gpio83_mode2_drvvbus_high>;
 	status = "okay";
 };
 /* USB GPIO Kernal Standardization end */
